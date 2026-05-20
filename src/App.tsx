@@ -1,8 +1,18 @@
+import { useState } from "react"
 
 function App() {
- 
+
+  const [count, setCount] = useState(0);
+
+  function handleClick() {
+    setCount(count + 1);
+  }
+
   return (
-   <h1>Ola mundo</h1>
+    <div>
+      <h1>Contagem = {count}</h1>
+      <button onClick={handleClick}>Incrementar</button>
+    </div>
   )
 }
 
